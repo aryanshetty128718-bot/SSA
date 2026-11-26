@@ -1,0 +1,159 @@
+{
+  "version": "1.0",
+  "name": "Default Nutritional Scoring Criteria (2023 Revision)",
+  "description": "Baseline cut-offs and weights informed by Nutri-Score 2023, WHO, FSSAI, and UK FSA front-of-pack traffic-light thresholds.",
+  "solid": {
+    "product_type": "solid",
+    "sugar_caps": {
+      "severe_threshold": 30.0,
+      "severe_max_score": 39.0,
+      "high_threshold": 22.5,
+      "high_max_score": 48.0
+    },
+    "parameters": {
+      "sugars": {
+        "name": "Sugars",
+        "unit": "g/100g",
+        "polarity": "negative",
+        "weight": 0.22,
+        "t_low": 5.0,
+        "t_high": 22.5,
+        "source": "UK FSA / WHO Cut-off (<=5g low/green, >22.5g high/red)"
+      },
+      "sodium": {
+        "name": "Sodium",
+        "unit": "mg/100g",
+        "polarity": "negative",
+        "weight": 0.18,
+        "t_low": 120.0,
+        "t_high": 600.0,
+        "source": "UK FSA / FSSAI (<=120mg low/green, >600mg high/red [~1.5g salt])"
+      },
+      "saturated_fat": {
+        "name": "Saturated Fat",
+        "unit": "g/100g",
+        "polarity": "negative",
+        "weight": 0.18,
+        "t_low": 1.5,
+        "t_high": 5.0,
+        "source": "UK FSA Front-of-Pack (<=1.5g low/green, >5.0g high/red)"
+      },
+      "energy": {
+        "name": "Energy",
+        "unit": "kcal/100g",
+        "polarity": "negative",
+        "weight": 0.12,
+        "t_low": 150.0,
+        "t_high": 450.0,
+        "source": "WHO / Nutri-Score energy density gradient (project-calibrated)"
+      },
+      "fiber": {
+        "name": "Dietary Fiber",
+        "unit": "g/100g",
+        "polarity": "positive",
+        "weight": 0.10,
+        "t_target": 6.0,
+        "source": "FSSAI / Codex High-Fiber definition (>=6g/100g)"
+      },
+      "proteins": {
+        "name": "Proteins",
+        "unit": "g/100g",
+        "polarity": "positive",
+        "weight": 0.10,
+        "t_target": 12.0,
+        "source": "FSSAI High-Protein claim benchmark (>=10-12g/100g)"
+      },
+      "ingredient_quality": {
+        "name": "Ingredient Quality",
+        "unit": "index",
+        "polarity": "positive",
+        "weight": 0.05,
+        "source": "Project-defined: Whole grains, sugar hierarchy order, NOVA processing level"
+      },
+      "additives": {
+        "name": "Additive Profile",
+        "unit": "deductions",
+        "polarity": "negative",
+        "weight": 0.05,
+        "source": "Project-defined: Neutral informational penalty for cosmetic E-numbers and ultra-processing markers"
+      }
+    }
+  },
+  "beverage": {
+    "product_type": "beverage",
+    "sugar_caps": {
+      "severe_threshold": 5.0,
+      "severe_max_score": 39.0,
+      "high_threshold": 5.0,
+      "high_max_score": 39.0
+    },
+    "parameters": {
+      "sugars": {
+        "name": "Sugars",
+        "unit": "g/100ml",
+        "polarity": "negative",
+        "weight": 0.50,
+        "t_low": 1.0,
+        "t_high": 5.0,
+        "source": "Project-defined, stricter than UK FSA (2.5 g / 11.25 g)"
+      },
+      "sodium": {
+        "name": "Sodium",
+        "unit": "mg/100ml",
+        "polarity": "negative",
+        "weight": 0.0,
+        "t_low": 120.0,
+        "t_high": 300.0,
+        "source": "Project-defined: Excluded (0 weight) for beverages as sodium is negligible in standard commercial beverages"
+      },
+      "saturated_fat": {
+        "name": "Saturated Fat",
+        "unit": "g/100ml",
+        "polarity": "negative",
+        "weight": 0.0,
+        "t_low": 0.75,
+        "t_high": 2.5,
+        "source": "Project-defined: Excluded (0 weight) for beverages as fat is absent from standard beverages"
+      },
+      "energy": {
+        "name": "Energy",
+        "unit": "kcal/100ml",
+        "polarity": "negative",
+        "weight": 0.20,
+        "t_low": 15.0,
+        "t_high": 35.0,
+        "source": "Project-defined, stricter than UK FSA (liquid calorie density scaling)"
+      },
+      "fiber": {
+        "name": "Dietary Fiber",
+        "unit": "g/100ml",
+        "polarity": "positive",
+        "weight": 0.0,
+        "t_target": 2.5,
+        "source": "Project-defined: Excluded (0 weight) for beverages"
+      },
+      "proteins": {
+        "name": "Proteins",
+        "unit": "g/100ml",
+        "polarity": "positive",
+        "weight": 0.0,
+        "t_target": 4.0,
+        "source": "Project-defined: Excluded (0 weight) for standard beverages"
+      },
+      "ingredient_quality": {
+        "name": "Ingredient Quality",
+        "unit": "index",
+        "polarity": "positive",
+        "weight": 0.15,
+        "source": "Project-defined: Free sugar hierarchy and fruit/vegetable percentage"
+      },
+      "additives": {
+        "name": "Additive Profile",
+        "unit": "deductions",
+        "polarity": "negative",
+        "weight": 0.15,
+        "source": "Nutri-Score 2023 beverage artificial sweetener penalty alignment & cosmetic additives"
+      }
+    }
+  }
+}

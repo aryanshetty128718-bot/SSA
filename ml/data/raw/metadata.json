@@ -1,0 +1,24 @@
+{
+  "source": "Open Food Facts Official S3 Dump (en.openfoodfacts.org.products.csv.gz)",
+  "download_date": "2026-11-25T13:27:50.727338",
+  "total_records": 6123,
+  "lines_scanned": 273192,
+  "elapsed_seconds": 212.39,
+  "target_per_category": 600,
+  "category_counts": {
+    "breakfast-cereals": 600,
+    "soft-drinks-sodas": 600,
+    "fruit-juices": 600,
+    "yoghurts": 600,
+    "biscuits-cookies": 600,
+    "chips-crisps-snacks": 600,
+    "chocolates-confectionery": 600,
+    "instant-noodles-pasta": 600,
+    "dairy-plant-drinks": 600,
+    "breads-bakery": 600
+  },
+  "country_counts": {
+    "india": 124,
+    "global": 5999
+  }
+}

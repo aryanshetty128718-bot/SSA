@@ -1,0 +1,12 @@
+{
+  "model_type": "Hybrid TF-IDF Cosine + Nutrient Euclidean Proximity",
+  "evaluation_rule": "Strictly excludes query product AND near-duplicate group variants",
+  "training_timestamp": "2026-11-25T14:29:08.920208",
+  "catalog_size": 6123,
+  "alpha_text_weight": 0.5,
+  "evaluation": {
+    "test_sample_size": 400,
+    "top1_category_precision": 0.9275,
+    "top5_intra_category_precision": 0.9235
+  }
+}

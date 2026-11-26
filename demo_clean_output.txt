@@ -1,0 +1,4558 @@
+Command exited with code 0.
+
+Command output:
+
+================================================================================
+ DEMO RECOMMENDATIONS: 1. Nutella (Hazelnut Cocoa Spread)
+================================================================================
+FROM products 
+WHERE products.barcode = ?
+ LIMIT ? OFFSET ?
+[*] Query Product: Nutella | Brand: Ferrero
+FROM categories 
+WHERE categories.id = ?
+    Barcode: 3017620422003 | Category: Confectionary Based Spreads
+    Product Type: solid | Source: openfoodfacts
+FROM product_scores 
+WHERE ? = product_scores.product_id
+    Current Health Score: 37.1/100 (Less Healthy) | Nutri-Score: E
+FROM products 
+WHERE products.id = ?
+ LIMIT ? OFFSET ?
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM categories 
+WHERE categories.slug = ?
+ LIMIT ? OFFSET ?
+FROM (SELECT products.id AS products_id, products.barcode AS products_barcode, products.name AS products_name, products.brand AS products_brand, products.generic_name AS products_generic_name, products.category_id AS products_category_id, products.serving_size AS products_serving_size, products.image_url AS products_image_url, products.packaging AS products_packaging, products.origin_country AS products_origin_country, products.nova_group AS products_nova_group, products.nutri_score_grade AS products_nutri_score_grade, products.data_completeness_score AS products_data_completeness_score, products.data_source AS products_data_source, products.source AS products_source, products.created_at AS products_created_at, products.updated_at AS products_updated_at 
+FROM products 
+WHERE products.category_id = ?) AS anon_1
+FROM categories 
+WHERE categories.slug = ?
+ LIMIT ? OFFSET ?
+FROM products JOIN categories ON categories.id = products.category_id 
+WHERE categories.product_type = ? AND products.id != ? AND products.barcode != ? AND products.source != ? AND products.data_completeness_score >= ? AND (products.category_id IN (?, ?) OR (EXISTS (SELECT 1 
+FROM product_category_tags 
+WHERE products.id = product_category_tags.product_id AND product_category_tags.tag IN (?, ?, ?, ?, ?))))
+ LIMIT ? OFFSET ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM products 
+WHERE products.id = ?
+FROM categories 
+WHERE categories.id = ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+
+[+] Healthier Alternatives Found: 5
+--------------------------------------------------------------------------------
+  #1 Trident perfect peppermint slim pack (Trident) [Barcode: 0012546011426]
+     Health Score: 84.5/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.60 | Score Delta: +47.4 | Composite Rank: 0.6171
+     Explanation: Contains 100% less sugars (0.0g/100g vs 56.3g/100g); Contains 100% less saturated fat (0.0g/100g vs 10.6g/100g); Contains 100% less sodium (0.0mg/100g vs 42.8mg/100g).
+--------------------------------------------------------------------------------
+  #2 Limited edition despicible me minion bundle (Tic Tac) [Barcode: 0009800006113]
+     Health Score: 84.0/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.60 | Score Delta: +46.9 | Composite Rank: 0.6140
+     Explanation: Contains 100% less sugars (0.0g/100g vs 56.3g/100g); Contains 100% less saturated fat (0.0g/100g vs 10.6g/100g); Contains 100% less sodium (0.0mg/100g vs 42.8mg/100g).
+--------------------------------------------------------------------------------
+  #3 Sugar free star brites peppermints hard candy (Brach's) [Barcode: 0011300385339]
+     Health Score: 81.1/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.60 | Score Delta: +44.0 | Composite Rank: 0.5967
+     Explanation: Contains 100% less sugars (0.0g/100g vs 56.3g/100g); Contains 100% less saturated fat (0.0g/100g vs 10.6g/100g); Contains 100% less sodium (0.0mg/100g vs 42.8mg/100g).
+--------------------------------------------------------------------------------
+  #4 Sugar free cinnamon hard candy (Brach's) [Barcode: 0011300385377]
+     Health Score: 80.8/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.60 | Score Delta: +43.7 | Composite Rank: 0.5950
+     Explanation: Contains 100% less sugars (0.0g/100g vs 56.3g/100g); Contains 100% less saturated fat (0.0g/100g vs 10.6g/100g); Contains 100% less sodium (0.0mg/100g vs 42.8mg/100g).
+--------------------------------------------------------------------------------
+  #5 Trident gum island berry lime sugar free1x18 pc (Trident) [Barcode: 0012546001915]
+     Health Score: 78.5/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.60 | Score Delta: +41.4 | Composite Rank: 0.5811
+     Explanation: Contains 100% less sugars (0.0g/100g vs 56.3g/100g); Contains 100% less saturated fat (0.0g/100g vs 10.6g/100g); Contains 100% less sodium (0.0mg/100g vs 42.8mg/100g).
+--------------------------------------------------------------------------------
+
+================================================================================
+ DEMO RECOMMENDATIONS: 2. Regular Cola (High Sugar Beverage)
+================================================================================
+FROM products 
+WHERE products.barcode = ?
+ LIMIT ? OFFSET ?
+[*] Query Product: Classic Carbonated Cola Beverage | Brand: SparkleFizz
+FROM categories 
+WHERE categories.id = ?
+    Barcode: 8901058800067 | Category: Soft Drinks & Sodas
+    Product Type: beverage | Source: seed
+FROM product_scores 
+WHERE ? = product_scores.product_id
+    Current Health Score: 30.9/100 (Less Healthy) | Nutri-Score: E
+FROM products 
+WHERE products.id = ?
+ LIMIT ? OFFSET ?
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM categories 
+WHERE categories.slug = ?
+ LIMIT ? OFFSET ?
+FROM (SELECT products.id AS products_id, products.barcode AS products_barcode, products.name AS products_name, products.brand AS products_brand, products.generic_name AS products_generic_name, products.category_id AS products_category_id, products.serving_size AS products_serving_size, products.image_url AS products_image_url, products.packaging AS products_packaging, products.origin_country AS products_origin_country, products.nova_group AS products_nova_group, products.nutri_score_grade AS products_nutri_score_grade, products.data_completeness_score AS products_data_completeness_score, products.data_source AS products_data_source, products.source AS products_source, products.created_at AS products_created_at, products.updated_at AS products_updated_at 
+FROM products 
+WHERE products.category_id = ?) AS anon_1
+FROM products JOIN categories ON categories.id = products.category_id 
+WHERE categories.product_type = ? AND products.id != ? AND products.barcode != ? AND products.source != ? AND products.data_completeness_score >= ? AND products.category_id IN (?)
+ LIMIT ? OFFSET ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM products 
+WHERE products.id = ?
+FROM categories 
+WHERE categories.id = ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+
+[+] Healthier Alternatives Found: 5
+--------------------------------------------------------------------------------
+  #1 Naturally Essenced Pamplemousse Sparkling Water (La Croix) [Barcode: 0012993101619]
+     Health Score: 100.0/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.60 | Score Delta: +69.1 | Composite Rank: 0.7318
+     Explanation: Contains 100% less sugars (0.0g/100ml vs 10.9g/100ml); Contains 100% less sodium (0.0mg/100ml vs 12.0mg/100ml); Contains 100% less energy (0.0kcal/100ml vs 44.0kcal/100ml).
+--------------------------------------------------------------------------------
+  #2 Value, Diet Soda, Cola (Kroger) [Barcode: 0011110007148]
+     Health Score: 91.0/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.69 | Score Delta: +60.1 | Composite Rank: 0.7119
+     Explanation: Contains 100% less sugars (0.0g/100ml vs 10.9g/100ml); Contains 49% less sodium (6.1mg/100ml vs 12.0mg/100ml); Contains 100% less energy (0.0kcal/100ml vs 44.0kcal/100ml).
+--------------------------------------------------------------------------------
+  #3 Sparkling Water (Sparkling Water Tangerine La Croix) [Barcode: 0012993441074]
+     Health Score: 96.2/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.60 | Score Delta: +65.3 | Composite Rank: 0.7092
+     Explanation: Contains 100% less sugars (0.0g/100ml vs 10.9g/100ml); Contains 100% less sodium (0.0mg/100ml vs 12.0mg/100ml); Contains 100% less energy (0.0kcal/100ml vs 44.0kcal/100ml).
+--------------------------------------------------------------------------------
+  #4 Roundy's, zero calorie soda, cola, cola (Roundy's) [Barcode: 0011150164405]
+     Health Score: 88.2/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.72 | Score Delta: +57.2 | Composite Rank: 0.7068
+     Explanation: Contains 100% less sugars (0.0g/100ml vs 10.9g/100ml); Contains 75% less sodium (3.0mg/100ml vs 12.0mg/100ml); Contains 100% less energy (0.0kcal/100ml vs 44.0kcal/100ml).
+--------------------------------------------------------------------------------
+  #5 Diet Soda, Cola (Roundy's) [Barcode: 0011150164283]
+     Health Score: 88.5/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.70 | Score Delta: +57.5 | Composite Rank: 0.7006
+     Explanation: Contains 100% less sugars (0.0g/100ml vs 10.9g/100ml); Contains 75% less sodium (3.0mg/100ml vs 12.0mg/100ml); Contains 100% less energy (0.0kcal/100ml vs 44.0kcal/100ml).
+--------------------------------------------------------------------------------
+
+================================================================================
+ DEMO RECOMMENDATIONS: 3. Sugary Breakfast Cereal
+================================================================================
+FROM products 
+WHERE products.barcode = ?
+ LIMIT ? OFFSET ?
+[*] Query Product: Sugar Frosted Flakes Breakfast Cereal | Brand: SweetMorning
+FROM categories 
+WHERE categories.id = ?
+    Barcode: 8901058800036 | Category: Breakfast Cereals
+    Product Type: solid | Source: seed
+FROM product_scores 
+WHERE ? = product_scores.product_id
+    Current Health Score: 51.1/100 (Moderate) | Nutri-Score: E
+FROM products 
+WHERE products.id = ?
+ LIMIT ? OFFSET ?
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM categories 
+WHERE categories.slug = ?
+ LIMIT ? OFFSET ?
+FROM (SELECT products.id AS products_id, products.barcode AS products_barcode, products.name AS products_name, products.brand AS products_brand, products.generic_name AS products_generic_name, products.category_id AS products_category_id, products.serving_size AS products_serving_size, products.image_url AS products_image_url, products.packaging AS products_packaging, products.origin_country AS products_origin_country, products.nova_group AS products_nova_group, products.nutri_score_grade AS products_nutri_score_grade, products.data_completeness_score AS products_data_completeness_score, products.data_source AS products_data_source, products.source AS products_source, products.created_at AS products_created_at, products.updated_at AS products_updated_at 
+FROM products 
+WHERE products.category_id = ?) AS anon_1
+FROM products JOIN categories ON categories.id = products.category_id 
+WHERE categories.product_type = ? AND products.id != ? AND products.barcode != ? AND products.source != ? AND products.data_completeness_score >= ? AND products.category_id IN (?)
+ LIMIT ? OFFSET ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM products 
+WHERE products.id = ?
+FROM categories 
+WHERE categories.id = ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+
+[+] Healthier Alternatives Found: 5
+--------------------------------------------------------------------------------
+  #1 Roasted seaweed sushinori (Hime Brand) [Barcode: 0011152010960]
+     Health Score: 94.2/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.60 | Score Delta: +43.1 | Composite Rank: 0.6263
+     Explanation: Contains 100% less sugars (0.0g/100g vs 37.0g/100g); Contains 100% less saturated fat (0.0g/100g vs 0.2g/100g); Contains 100% less sodium (0.0mg/100g vs 480.0mg/100g).
+--------------------------------------------------------------------------------
+  #2 Whole Durum Wheat Cous Cous (Trader Joe's) [Barcode: 00075374]
+     Health Score: 93.9/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.60 | Score Delta: +42.8 | Composite Rank: 0.6246
+     Explanation: Contains 100% less sugars (0.0g/100g vs 37.0g/100g); Contains 100% less saturated fat (0.0g/100g vs 0.2g/100g); Contains 100% less sodium (0.0mg/100g vs 480.0mg/100g).
+--------------------------------------------------------------------------------
+  #3 Oven Toasted Old Fashioned Organic Oats (Trader Joe's) [Barcode: 00048569]
+     Health Score: 93.7/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.60 | Score Delta: +42.6 | Composite Rank: 0.6234
+     Explanation: Contains 100% less sugars (0.0g/100g vs 37.0g/100g); Contains 100% less saturated fat (0.0g/100g vs 0.2g/100g); Contains 100% less sodium (0.0mg/100g vs 480.0mg/100g).
+--------------------------------------------------------------------------------
+  #4 instant oatmeal original (simple truth) [Barcode: 0011110719072]
+     Health Score: 93.5/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.60 | Score Delta: +42.4 | Composite Rank: 0.6221
+     Explanation: Contains 100% less sugars (0.0g/100g vs 37.0g/100g); Contains 100% less saturated fat (0.0g/100g vs 0.2g/100g); Contains 100% less sodium (0.0mg/100g vs 480.0mg/100g).
+--------------------------------------------------------------------------------
+  #5 Lightly frosted whole wheat cereal (Spartan) [Barcode: 0011213191416]
+     Health Score: 74.9/100 (Healthy Choice, Nutri-Score: B)
+     Model B Similarity: 0.87 | Score Delta: +23.8 | Composite Rank: 0.6202
+     Explanation: Contains 43% less sugars (21.15g/100g vs 37.0g/100g); Contains 100% less saturated fat (0.0g/100g vs 0.2g/100g); Contains 100% less sodium (0.0mg/100g vs 480.0mg/100g).
+--------------------------------------------------------------------------------
+
+================================================================================
+ DEMO RECOMMENDATIONS: 4. Sandwich Biscuit / Cookies
+================================================================================
+FROM products 
+WHERE products.barcode = ?
+ LIMIT ? OFFSET ?
+[*] Query Product: Chocolate Vanilla Double Cream Sandwich Biscuit | Brand: ChocoTreat
+FROM categories 
+WHERE categories.id = ?
+    Barcode: 8901058800203 | Category: Biscuits & Cookies
+    Product Type: solid | Source: seed
+FROM product_scores 
+WHERE ? = product_scores.product_id
+    Current Health Score: 33.9/100 (Less Healthy) | Nutri-Score: E
+FROM products 
+WHERE products.id = ?
+ LIMIT ? OFFSET ?
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM categories 
+WHERE categories.slug = ?
+ LIMIT ? OFFSET ?
+FROM (SELECT products.id AS products_id, products.barcode AS products_barcode, products.name AS products_name, products.brand AS products_brand, products.generic_name AS products_generic_name, products.category_id AS products_category_id, products.serving_size AS products_serving_size, products.image_url AS products_image_url, products.packaging AS products_packaging, products.origin_country AS products_origin_country, products.nova_group AS products_nova_group, products.nutri_score_grade AS products_nutri_score_grade, products.data_completeness_score AS products_data_completeness_score, products.data_source AS products_data_source, products.source AS products_source, products.created_at AS products_created_at, products.updated_at AS products_updated_at 
+FROM products 
+WHERE products.category_id = ?) AS anon_1
+FROM products JOIN categories ON categories.id = products.category_id 
+WHERE categories.product_type = ? AND products.id != ? AND products.barcode != ? AND products.source != ? AND products.data_completeness_score >= ? AND products.category_id IN (?)
+ LIMIT ? OFFSET ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_category_tags 
+WHERE ? = product_category_tags.product_id ORDER BY product_category_tags.depth
+FROM products 
+WHERE products.id = ?
+FROM categories 
+WHERE categories.id = ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+
+[+] Healthier Alternatives Found: 5
+--------------------------------------------------------------------------------
+  #1 Unsalted Sesame Brown Rice Snaps (Edward & Sons) [Barcode: 0011206000367]
+     Health Score: 88.2/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.60 | Score Delta: +54.3 | Composite Rank: 0.6506
+     Explanation: Contains 100% less sugars (0.0g/100g vs 38.0g/100g); Contains 100% less saturated fat (0.0g/100g vs 11.5g/100g); Contains 100% less sodium (0.0mg/100g vs 410.0mg/100g).
+--------------------------------------------------------------------------------
+  #2 Roundy's, crunchy granola, vanilla, almond (Roundy's) [Barcode: 0011150302012]
+     Health Score: 78.7/100 (Healthy Choice, Nutri-Score: A)
+     Model B Similarity: 0.64 | Score Delta: +44.8 | Composite Rank: 0.6091
+     Explanation: Contains 68% less sugars (12.24g/100g vs 38.0g/100g); Contains 91% less saturated fat (1.02g/100g vs 11.5g/100g); Contains 100% less sodium (0.0mg/100g vs 410.0mg/100g).
+--------------------------------------------------------------------------------
+  #3 Saltines (Kroger) [Barcode: 0011110090904]
+     Health Score: 80.3/100 (Healthy Choice, Nutri-Score: NOT_COMPUTABLE)
+     Model B Similarity: 0.60 | Score Delta: +46.4 | Composite Rank: 0.6032
+     Explanation: Contains 100% less sugars (0.0g/100g vs 38.0g/100g); Contains 100% less saturated fat (0.0g/100g vs 11.5g/100g); Contains 67% less sodium (135.0mg/100g vs 410.0mg/100g).
+--------------------------------------------------------------------------------
+  #4 Onion Garlic Brown Rice Snaps (Edward & Sons) [Barcode: 0011206000374]
+     Health Score: 73.2/100 (Healthy Choice, Nutri-Score: C)
+     Model B Similarity: 0.60 | Score Delta: +39.4 | Composite Rank: 0.5610
+     Explanation: Contains 100% less sugars (0.0g/100g vs 38.0g/100g); Contains 71% less saturated fat (3.33g/100g vs 11.5g/100g); Contains 19% less sodium (333.0mg/100g vs 410.0mg/100g).
+--------------------------------------------------------------------------------
+  #5 Paupiette de volaille sauce forestière brocolis purée (Marks & Spencer) [Barcode: 00027137]
+     Health Score: 68.5/100 (Moderate, Nutri-Score: B)
+     Model B Similarity: 0.60 | Score Delta: +34.6 | Composite Rank: 0.5323
+     Explanation: Contains 98% less sugars (0.9g/100g vs 38.0g/100g); Contains 87% less saturated fat (1.5g/100g vs 11.5g/100g); Contains 46% less sodium (220.0mg/100g vs 410.0mg/100g).
+--------------------------------------------------------------------------------
+
+================================================================================
+ DEMO MULTI-PRODUCT SIDE-BY-SIDE COMPARISON (/api/v1/compare)
+================================================================================
+FROM products 
+WHERE products.barcode = ?
+ LIMIT ? OFFSET ?
+FROM products 
+WHERE products.barcode = ?
+ LIMIT ? OFFSET ?
+FROM products 
+WHERE products.barcode = ?
+ LIMIT ? OFFSET ?
+FROM categories 
+WHERE categories.id = ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_ingredients 
+WHERE ? = product_ingredients.product_id ORDER BY product_ingredients.position_order
+FROM ingredients 
+WHERE ingredients.id = ?
+FROM ingredients 
+WHERE ingredients.id = ?
+FROM ingredients 
+WHERE ingredients.id = ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_ingredients 
+WHERE ? = product_ingredients.product_id ORDER BY product_ingredients.position_order
+FROM ingredients 
+WHERE ingredients.id = ?
+FROM product_scores 
+WHERE ? = product_scores.product_id
+FROM nutritional_information 
+WHERE ? = nutritional_information.product_id
+FROM product_ingredients 
+WHERE ? = product_ingredients.product_id ORDER BY product_ingredients.position_order
+FROM ingredients 
+WHERE ingredients.id = ?
+FROM ingredients 
+WHERE ingredients.id = ?
+FROM ingredients 
+WHERE ingredients.id = ?
+Comparing 3 Selected Products:
+  - Sugar Frosted Flakes Breakfast Cereal (SweetMorning) | Score: 51.1 (Moderate, NS: E) | Barcode: 8901058800036
+  - Traditional Rolled Oats 100% Wholegrain (PureHarvest) | Score: 87.7 (Healthy Choice, NS: A) | Barcode: 8901058800012
+  - Crunchy Almond & Honey Granola (NatureBake) | Score: 66.3 (Moderate, NS: C) | Barcode: 8901058800029
+
+PARAMETER COMPARISON MATRIX:
+Parameter              | Sugar Frosted Fl | Traditional Roll | Crunchy Almond & | Best Barcode
+--------------------------------------------------------------------------------
+Sugars                 | 37.0 g           | 1.0 g            | 18.5 g           | 8901058800012
+Saturated Fat          | 0.2 g            | 1.2 g            | 2.5 g            | 8901058800036
+Sodium                 | 480.0 mg         | 5.0 mg           | 140.0 mg         | 8901058800012
+Energy                 | 385.0 kcal       | 389.0 kcal       | 445.0 kcal       | 8901058800036
+Dietary Fiber          | 2.0 g            | 10.6 g           | 6.8 g            | 8901058800012
+Proteins               | 5.0 g            | 16.9 g           | 10.2 g           | 8901058800012
+Salt                   | 1.2 g            | 0.0 g            | 0.3 g            | 8901058800012
+Overall Health Score   | 51.1 /100        | 87.7 /100        | 66.3 /100        | 8901058800012
+
+NUANCED SUMMARY VERDICT:
+  Traditional Rolled Oats 100% Wholegrain holds a substantial nutritional advantage (score 87.7/100 vs Crunchy Almond & Honey Granola's 66.3/100). Key strengths for Traditional Rolled Oats 100% Wholegrain include lower sugars, lower sodium, higher dietary fiber.

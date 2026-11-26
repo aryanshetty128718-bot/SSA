@@ -1,0 +1,141 @@
+{
+  "validation_sample_size": 4604,
+  "spearman_rank_correlation": -0.8247,
+  "spearman_pvalue": 0.0,
+  "pearson_linear_correlation": -0.8048,
+  "pearson_pvalue": 0.0,
+  "grade_summary": {
+    "A": {
+      "count": 442,
+      "mean_project_score": 82.08,
+      "std_project_score": 5.8,
+      "median_project_score": 83.67,
+      "min": 68.36,
+      "max": 94.2
+    },
+    "B": {
+      "count": 485,
+      "mean_project_score": 74.67,
+      "std_project_score": 7.01,
+      "median_project_score": 73.52,
+      "min": 48.0,
+      "max": 100.0
+    },
+    "C": {
+      "count": 961,
+      "mean_project_score": 67.38,
+      "std_project_score": 5.94,
+      "median_project_score": 67.82,
+      "min": 39.0,
+      "max": 95.0
+    },
+    "D": {
+      "count": 831,
+      "mean_project_score": 55.24,
+      "std_project_score": 10.28,
+      "median_project_score": 58.07,
+      "min": 39.0,
+      "max": 86.61
+    },
+    "E": {
+      "count": 1885,
+      "mean_project_score": 40.76,
+      "std_project_score": 9.16,
+      "median_project_score": 39.0,
+      "min": 21.19,
+      "max": 81.81
+    }
+  },
+  "top_disagreements": [
+    {
+      "code": "10041001140",
+      "product_name": "Lait de coco",
+      "category": "dairy-plant-drinks",
+      "project_score": 80.05,
+      "ns_points": 23,
+      "ns_grade": "E",
+      "primary_driver": "Beverage strict scoring"
+    },
+    {
+      "code": "39675777771",
+      "product_name": "Corn Chips",
+      "category": "fruit-juices",
+      "project_score": 80.05,
+      "ns_points": 21,
+      "ns_grade": "E",
+      "primary_driver": "Beverage strict scoring"
+    },
+    {
+      "code": "11110502087",
+      "product_name": "2% Milk Reduced Fat Monterey Jack Cheese",
+      "category": "dairy-plant-drinks",
+      "project_score": 74.8,
+      "ns_points": 23,
+      "ns_grade": "E",
+      "primary_driver": "Beverage strict scoring; High protein balancing high fat in NS; High sodium penalty in Project Score"
+    },
+    {
+      "code": "11152206929",
+      "product_name": "Japanese Ramen Noodles",
+      "category": "breakfast-cereals",
+      "project_score": 69.11,
+      "ns_points": 24,
+      "ns_grade": "E",
+      "primary_driver": "High sodium penalty in Project Score"
+    },
+    {
+      "code": "70200581197",
+      "product_name": "Seasoned Croutons",
+      "category": "breads-bakery",
+      "project_score": 72.72,
+      "ns_points": 20,
+      "ns_grade": "E",
+      "primary_driver": "High sodium penalty in Project Score"
+    },
+    {
+      "code": "55872240573",
+      "product_name": "Whopping Cream 35%",
+      "category": "dairy-plant-drinks",
+      "project_score": 71.05,
+      "ns_points": 21,
+      "ns_grade": "E",
+      "primary_driver": "Beverage strict scoring"
+    },
+    {
+      "code": "70540000013",
+      "product_name": "Angonoa's, Breadsticks, Garlic",
+      "category": "breads-bakery",
+      "project_score": 75.55,
+      "ns_points": 17,
+      "ns_grade": "D",
+      "primary_driver": "High sodium penalty in Project Score"
+    },
+    {
+      "code": "2000008390",
+      "product_name": "Acras de morue",
+      "category": "chips-crisps-snacks",
+      "project_score": 66.45,
+      "ns_points": 23,
+      "ns_grade": "E",
+      "primary_driver": "High sodium penalty in Project Score"
+    },
+    {
+      "code": "84909017895",
+      "product_name": "Chinese Style Noodles",
+      "category": "instant-noodles-pasta",
+      "project_score": 69.22,
+      "ns_points": 20,
+      "ns_grade": "E",
+      "primary_driver": "High sodium penalty in Project Score"
+    },
+    {
+      "code": "25225037020",
+      "product_name": "Winneram Int'L, Chohk Dee Coconut Milk",
+      "category": "dairy-plant-drinks",
+      "project_score": 78.4,
+      "ns_points": 14,
+      "ns_grade": "E",
+      "primary_driver": "Beverage strict scoring"
+    }
+  ]
+}

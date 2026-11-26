@@ -1,0 +1,47 @@
+from typing import Dict, Any, List, Optional
+from pydantic import BaseModel, Field
+
+class NutrientComparisonItem(BaseModel):
+    parameter: str = Field(..., description="Nutrient key: sugars, saturated_fat, sodium, fiber, proteins, energy")
+    display_name: str = Field(..., description="Human-readable parameter title")
+    unit: str = Field(..., description="Unit of measurement: g, mg, kcal")
+    query_value: Optional[float] = Field(None, description="Original product nutrient amount")
+    candidate_value: Optional[float] = Field(None, description="Alternative product nutrient amount")
+    absolute_delta: Optional[float] = Field(None, description="Candidate minus Original (negative means reduction)")
+    relative_delta_pct: Optional[float] = Field(None, description="Percentage change (safe against zero division)")
+    is_better: bool = Field(..., description="True if candidate offers a health improvement for this parameter")
+    explanation: str = Field(..., description="Sentence explaining this specific nutrient comparison")
+
+class RecommendationItem(BaseModel):
+    id: str = Field(..., description="Product UUID")
+    barcode: str = Field(..., description="GTIN barcode")
+    name: str = Field(..., description="Product commercial name")
+    brand: Optional[str] = Field(None, description="Brand name")
+    image_url: Optional[str] = Field(None, description="Front image URL")
+    category_name: str = Field(..., description="Category display title")
+    overall_score: float = Field(..., description="Proposed Project Health Score (0-100)")
+    score_band: str = Field(..., description="Healthy Choice, Moderate, or Less Healthy")
+    badge_color: str = Field(..., description="green, amber, or red")
+    nutri_score_grade: Optional[str] = Field(None, description="Official Nutri-Score reference grade (A-E)")
+    similarity_score: float = Field(..., description="Multimodal hybrid similarity (0.0 - 1.0)")
+    ingredient_similarity: Optional[float] = Field(None, description="Jaccard similarity on canonical ingredients (0.0 - 1.0)")
+    nutrient_similarity: Optional[float] = Field(None, description="Cosine similarity on normalized nutrients (0.0 - 1.0)")
+    tier: Optional[str] = Field(None, description="Tier 1: Same Product Type or Tier 2: Related Alternative")
+    tier_badge: Optional[str] = Field(None, description="UI badge string, e.g. 'Same type: Dried Pasta'")
+    composite_rank_score: float = Field(..., description="Deterministic ranking score")
+    rank: int = Field(..., description="1-based recommendation priority rank")
+    score_improvement: float = Field(..., description="Score delta (Candidate - Query)")
+    parameter_deltas: Optional[Dict[str, Optional[float]]] = Field(default_factory=dict, description="Parameter deltas map")
+    trade_off_flags: List[str] = Field(default_factory=list, description="Warnings if any nutrient spiked")
+    trade_offs: List[str] = Field(default_factory=list, description="Alias for trade-off flags")
+    explanation: str = Field(..., description="Generated human-readable rationale synthesized from real deltas")
+    key_nutrients: Dict[str, Optional[float]] = Field(default_factory=dict, description="Nutrient amounts per 100g/ml")
+    parameter_comparisons: List[NutrientComparisonItem] = Field(default_factory=list, description="Granular parameter deltas")
+    source: Optional[str] = Field("openfoodfacts", description="Product data source")
+
+class RecommendationResponse(BaseModel):
+    query_product: Dict[str, Any] = Field(..., description="Original product metadata and scores")
+    count: int = Field(..., description="Number of recommendations returned")
+    recommendations: List[RecommendationItem] = Field(..., description="Ranked healthier alternative products")
+    ranking_method: str = Field("Project-defined deterministic rule (similarity 0.40, delta 0.35, score 0.25)", description="Methodology label")
+    notes: Optional[str] = Field(None, description="Honest evaluation note on candidate pool depth")

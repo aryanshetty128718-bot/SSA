@@ -1,0 +1,197 @@
+{
+  "model_type": "LinearSVM",
+  "split_methodology": "GroupShuffleSplit (Grouped by normalized name+brand)",
+  "training_timestamp": "2026-11-26T00:10:23.861502",
+  "total_dataset_size": 6123,
+  "unique_groups": 5718,
+  "train_samples": 4912,
+  "test_samples": 1211,
+  "categories": [
+    "biscuits-cookies",
+    "breads-bakery",
+    "breakfast-cereals",
+    "chips-crisps-snacks",
+    "chocolates-confectionery",
+    "dairy-plant-drinks",
+    "fruit-juices",
+    "instant-noodles-pasta",
+    "soft-drinks-sodas",
+    "yoghurts"
+  ],
+  "cv_results": {
+    "LinearSVM": {
+      "cv_accuracy_mean": 0.9322059533453642,
+      "cv_accuracy_std": 0.010139483274004213,
+      "cv_f1_macro_mean": 0.9320498789667105,
+      "cv_f1_macro_std": 0.01016597161169668
+    },
+    "LogisticRegression": {
+      "cv_accuracy_mean": 0.9254870476304923,
+      "cv_accuracy_std": 0.007779435110825279,
+      "cv_f1_macro_mean": 0.9251761009060934,
+      "cv_f1_macro_std": 0.007866173962136545
+    },
+    "RandomForest": {
+      "cv_accuracy_mean": 0.9012623976231371,
+      "cv_accuracy_std": 0.008065296522166891,
+      "cv_f1_macro_mean": 0.9015752311521045,
+      "cv_f1_macro_std": 0.00804938774589015
+    }
+  },
+  "baseline_comparison": {
+    "baseline_type": "Deterministic Keyword / Substring Rules",
+    "baseline_test_accuracy": 0.5375722543352601,
+    "baseline_test_macro_f1": 0.507853366981604,
+    "ml_test_accuracy": 0.9488026424442609,
+    "ml_test_macro_f1": 0.9477252668156387,
+    "ml_accuracy_gain_pct_points": 41.12
+  },
+  "test_metrics": {
+    "accuracy": 0.9488026424442609,
+    "macro_f1": 0.9477252668156387,
+    "per_class": {
+      "biscuits-cookies": {
+        "precision": 0.9104477611940298,
+        "recall": 0.9606299212598425,
+        "f1-score": 0.9348659003831418,
+        "support": 127.0
+      },
+      "breads-bakery": {
+        "precision": 0.9454545454545454,
+        "recall": 0.9203539823008849,
+        "f1-score": 0.9327354260089686,
+        "support": 113.0
+      },
+      "breakfast-cereals": {
+        "precision": 0.848,
+        "recall": 0.8548387096774194,
+        "f1-score": 0.8514056224899599,
+        "support": 124.0
+      },
+      "chips-crisps-snacks": {
+        "precision": 0.9504950495049505,
+        "recall": 0.96,
+        "f1-score": 0.9552238805970149,
+        "support": 100.0
+      },
+      "chocolates-confectionery": {
+        "precision": 0.9495798319327731,
+        "recall": 0.9658119658119658,
+        "f1-score": 0.9576271186440678,
+        "support": 117.0
+      },
+      "dairy-plant-drinks": {
+        "precision": 1.0,
+        "recall": 0.971830985915493,
+        "f1-score": 0.9857142857142858,
+        "support": 142.0
+      },
+      "fruit-juices": {
+        "precision": 0.9926470588235294,
+        "recall": 0.9782608695652174,
+        "f1-score": 0.9854014598540146,
+        "support": 138.0
+      },
+      "instant-noodles-pasta": {
+        "precision": 0.9158878504672897,
+        "recall": 0.8990825688073395,
+        "f1-score": 0.9074074074074074,
+        "support": 109.0
+      },
+      "soft-drinks-sodas": {
+        "precision": 0.9754098360655737,
+        "recall": 0.9834710743801653,
+        "f1-score": 0.9794238683127572,
+        "support": 121.0
+      },
+      "yoghurts": {
+        "precision": 0.9915966386554622,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9874476987447699,
+        "support": 120.0
+      }
+    }
+  },
+  "sample_ml_wins": [
+    {
+      "product_name": "Mcvitie's, mini gingerbread men, milk chocolate",
+      "brand": "Mcvitie's",
+      "true_category": "biscuits-cookies",
+      "ml_prediction": "biscuits-cookies",
+      "baseline_prediction": "soft-drinks-sodas",
+      "text_snippet": "mcvitie's, mini gingerbread men, milk chocolate mcvitie's flour wheat "
+    },
+    {
+      "product_name": "Dental gum",
+      "brand": "Lotus Brands  Inc.",
+      "true_category": "chocolates-confectionery",
+      "ml_prediction": "chocolates-confectionery",
+      "baseline_prediction": "chips-crisps-snacks",
+      "text_snippet": "dental gum lotus brands inc. sorbitol, gum base, maltitol syrup, xylit"
+    },
+    {
+      "product_name": "Madelaine Chocolate, It's A Girl! Solid Milk Chocolate Cigars, Milk Chocolate",
+      "brand": "Madelaine Chocolate Novelties",
+      "true_category": "chocolates-confectionery",
+      "ml_prediction": "chocolates-confectionery",
+      "baseline_prediction": "soft-drinks-sodas",
+      "text_snippet": "madelaine chocolate, it's a girl! solid milk chocolate cigars, milk ch"
+    },
+    {
+      "product_name": "Emojeez, Fruit Flavored Gummies, Green Apple, Orange, Fruit Punch, Lemon, Cherry Blue Raspberry",
+      "brand": "Healthy Food Brands Llc",
+      "true_category": "chocolates-confectionery",
+      "ml_prediction": "chocolates-confectionery",
+      "baseline_prediction": "chips-crisps-snacks",
+      "text_snippet": "emojeez, fruit flavored gummies, green apple, orange, fruit punch, lem"
+    },
+    {
+      "product_name": "Sour Fruit Gummies",
+      "brand": "Candy Crush",
+      "true_category": "chocolates-confectionery",
+      "ml_prediction": "chocolates-confectionery",
+      "baseline_prediction": "fruit-juices",
+      "text_snippet": "sour fruit gummies candy crush sugar, corn syrup, white grape juice fr"
+    },
+    {
+      "product_name": "Mixed fruit gummies",
+      "brand": "Candy Crush",
+      "true_category": "chocolates-confectionery",
+      "ml_prediction": "chocolates-confectionery",
+      "baseline_prediction": "fruit-juices",
+      "text_snippet": "mixed fruit gummies candy crush sugar, corn syrup, white grape juice f"
+    },
+    {
+      "product_name": "Grainaissance, mochi, cashew-date",
+      "brand": "Grainaissance",
+      "true_category": "breakfast-cereals",
+      "ml_prediction": "breakfast-cereals",
+      "baseline_prediction": "chips-crisps-snacks",
+      "text_snippet": "grainaissance, mochi, cashew-date grainaissance organic sweet brown ri"
+    },
+    {
+      "product_name": "Gold Fish Shaped Ravioli!",
+      "brand": "Nuovo Pasta",
+      "true_category": "breakfast-cereals",
+      "ml_prediction": "breakfast-cereals",
+      "baseline_prediction": "instant-noodles-pasta",
+      "text_snippet": "gold fish shaped ravioli! nuovo pasta filling: ricotta cheese milk, wh"
+    },
+    {
+      "product_name": "Pure Sesame Oil",
+      "brand": "Taiwan Sunlife Corp., Foreway",
+      "true_category": "breakfast-cereals",
+      "ml_prediction": "breakfast-cereals",
+      "baseline_prediction": "chips-crisps-snacks",
+      "text_snippet": "pure sesame oil taiwan sunlife corp., foreway sesame oil"
+    },
+    {
+      "product_name": "Long Grove Confectionery Co., Peanut Butter Melts",
+      "brand": "Long Grove Confectionery Co.",
+      "true_category": "chocolates-confectionery",
+      "ml_prediction": "chocolates-confectionery",
+      "baseline_prediction": "soft-drinks-sodas",
+      "text_snippet": "long grove confectionery co., peanut butter melts long grove confectio"
+    }
+  ]
+}

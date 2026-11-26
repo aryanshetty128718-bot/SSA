@@ -1,0 +1,30 @@
+{
+  "model_name": "Model A2 (Product Type Classifier)",
+  "algorithm": "Calibrated Linear Support Vector Machine (LinearSVC)",
+  "feature_types": [
+    "TF-IDF (1200 features, unigrams+bigrams)",
+    "Standardized Nutrients (8 features, median imputed)"
+  ],
+  "evaluation_strategy": "Grouped Brand Train/Test Split (GroupShuffleSplit, 20% test)",
+  "accuracy": 0.8919,
+  "macro_f1": 0.6561,
+  "weighted_f1": 0.8869,
+  "total_classes": 23,
+  "top_15_classes": [
+    "plain-biscuits",
+    "milk-chocolate",
+    "plain-yoghurt",
+    "cola",
+    "potato-chips",
+    "sliced-bread",
+    "pasta",
+    "cows-milk",
+    "oats-porridge",
+    "pure-fruit-juice",
+    "dark-chocolate",
+    "roasted-nuts-seeds",
+    "cereal-grains",
+    "muesli-granola",
+    "children-cereals"
+  ]
+}

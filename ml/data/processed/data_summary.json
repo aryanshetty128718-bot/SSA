@@ -1,0 +1,26 @@
+{
+  "total_records": 6123,
+  "category_distribution": {
+    "dairy-plant-drinks": 647,
+    "instant-noodles-pasta": 638,
+    "biscuits-cookies": 619,
+    "soft-drinks-sodas": 619,
+    "breakfast-cereals": 600,
+    "breads-bakery": 600,
+    "chocolates-confectionery": 600,
+    "yoghurts": 600,
+    "chips-crisps-snacks": 600,
+    "fruit-juices": 600
+  },
+  "indian_products_count": 124,
+  "global_products_count": 5999,
+  "missing_nutrient_rates_pct": {
+    "energy_kcal_100g": 0.07,
+    "sugars_100g": 1.03,
+    "fat_100g": 0.16,
+    "saturated_fat_100g": 13.54,
+    "sodium_100g": 1.19,
+    "proteins_100g": 0.13,
+    "fiber_100g": 22.86
+  }
+}
