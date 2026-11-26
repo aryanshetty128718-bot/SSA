@@ -216,7 +216,7 @@ def parse_off_product(raw_data: Dict[str, Any]) -> Dict[str, Any]:
     present_core_count = sum(1 for p in core_parameters if p is not None)
 
     if present_core_count == 0 and len(parsed_ingredients) == 0:
-        raise InsufficientDataError(f"Product '{name}' rejected: Contains neither nutritional data nor declared ingredients.")
+        raise InsufficientDataError(f"Product '{name}' rejected: Contains no usable nutritional data nor declared ingredients.")
 
     # Calculate data completeness score (0.0 - 1.0) based on 6 critical scoring parameters + ingredients
     critical_six = [energy_kcal, sugars_g, sodium_mg, saturated_fat_g, proteins_g, fiber_g]

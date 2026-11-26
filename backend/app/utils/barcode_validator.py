@@ -37,10 +37,11 @@ def validate_barcode(barcode: str, verify_check_digit: bool = True) -> Tuple[boo
     if not barcode:
         return False, "Barcode cannot be empty."
 
-    clean_barcode = clean_raw_barcode(barcode)
-
-    if not clean_barcode.isdigit():
+    raw_barcode = str(barcode).strip()
+    if not raw_barcode.isdigit():
         return False, f"Barcode '{barcode}' contains invalid non-numeric characters. Digits only are permitted."
+
+    clean_barcode = clean_raw_barcode(raw_barcode)
 
     length = len(clean_barcode)
     if length not in VALID_BARCODE_LENGTHS:

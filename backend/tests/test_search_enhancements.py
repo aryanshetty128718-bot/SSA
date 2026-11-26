@@ -34,8 +34,8 @@ def test_barcode_variants_upca_and_ean13():
     assert "012345678905" in variants_13
 
 def test_barcode_check_digit_rejection():
-    # 4006381333932 with altered last digit -> 4006381333931
-    is_valid, msg = validate_barcode("4006381333931")
+    # 400638133393 with invalid check digit 5 (expected 1)
+    is_valid, msg = validate_barcode("4006381333935")
     assert not is_valid
     assert "Invalid check digit" in msg
 

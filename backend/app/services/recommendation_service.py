@@ -22,10 +22,10 @@ import re
 import uuid
 import json
 from typing import Dict, Any, List, Optional, Tuple, Set
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload, joinedload
 from sqlalchemy import or_
 
-from app.models import Product, Category, NutritionalInformation, ProductScore, Recommendation, ProductCategoryTag
+from app.models import Product, Category, NutritionalInformation, ProductScore, Recommendation, ProductCategoryTag, ProductIngredient, Ingredient
 from app.core.taxonomy import (
     PRODUCT_TYPES,
     PRODUCT_TYPE_BY_ID,
@@ -289,11 +289,23 @@ class RecommendationService:
         7. Deterministic Composite Ranking & Persistence.
         """
         # Step 0: Fetch Query Product
+        base_qp = db.query(Product).options(
+            selectinload(Product.scores),
+            selectinload(Product.nutrition),
+            selectinload(Product.category_tags),
+            selectinload(Product.product_ingredients).joinedload(ProductIngredient.ingredient),
+            joinedload(Product.category),
+            joinedload(Product.product_type_rel)
+        )
+        target_id = (product_id or "").strip()
+        target_bc = (barcode or "").strip()
         query_prod = None
-        if product_id:
-            query_prod = db.query(Product).filter_by(id=product_id).first()
-        elif barcode:
-            query_prod = db.query(Product).filter_by(barcode=barcode.strip()).first()
+        if target_id and target_bc:
+            query_prod = base_qp.filter(or_(Product.id == target_id, Product.barcode == target_bc)).first()
+        elif target_id:
+            query_prod = base_qp.filter(or_(Product.id == target_id, Product.barcode == target_id)).first()
+        elif target_bc:
+            query_prod = base_qp.filter_by(barcode=target_bc).first()
 
         if not query_prod:
             target_str = product_id or barcode or "unknown"
@@ -374,6 +386,13 @@ class RecommendationService:
             Product.barcode != query_prod.barcode
         ).outerjoin(ProductScore, Product.id == ProductScore.product_id).order_by(
             ProductScore.overall_project_score.desc()
+        ).options(
+            selectinload(Product.scores),
+            selectinload(Product.nutrition),
+            selectinload(Product.category_tags),
+            selectinload(Product.product_ingredients).joinedload(ProductIngredient.ingredient),
+            joinedload(Product.category),
+            joinedload(Product.product_type_rel)
         )
 
         # Exclude seed products if configured
@@ -400,7 +419,7 @@ class RecommendationService:
         if allowed_cat_ids:
             cand_query = cand_query.filter(Product.category_id.in_(allowed_cat_ids))
 
-        raw_candidates = cand_query.limit(500).all()
+        raw_candidates = cand_query.limit(250).all()
 
         # Step 3, 4, 5, 6: Score and Filter Candidates
         scored_candidates = []

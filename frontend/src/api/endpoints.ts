@@ -62,9 +62,13 @@ export const endpoints = {
     try {
       const res = await api.get(`/recommendations/${productId}`, { params: { limit } });
       return res.data;
-    } catch {
-      const res = await api.get(`/products/${productId}/alternatives`, { params: { limit } });
-      return res.data;
+    } catch (err: any) {
+      if (err.response?.status === 404) {
+        // Fallback to alternatives by barcode route
+        const res = await api.get(`/recommendations/barcode/${productId}`, { params: { limit } });
+        return res.data;
+      }
+      throw err;
     }
   },
 

@@ -21,36 +21,65 @@ export const AlternativesPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedForCompare, setSelectedForCompare] = useState<string[]>([]);
 
-  useEffect(() => {
+  const fetchData = async () => {
     if (!barcode) {
       setError('No product barcode specified.');
       setLoading(false);
       return;
     }
 
-    const fetchData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      // Fetch base product by barcode first
+      let prodId = barcode;
       try {
-        setLoading(true);
-        setError(null);
-
         const prodRes = await endpoints.getProductByBarcode(barcode);
-        const prodId = prodRes.product?.id || prodRes.id || barcode;
-        const [analysisRes, recoRes] = await Promise.all([
-          endpoints.getProductAnalysis(prodId),
-          endpoints.getAlternatives(prodId, 6)
-        ]);
-
-        setAnalysis(analysisRes);
-        setAlternatives(recoRes.recommendations || []);
-        setSelectedForCompare([prodId]);
-      } catch (err: any) {
-        console.error(err);
-        setError(err.response?.data?.detail || 'Failed to load recommendations. Please verify the barcode.');
-      } finally {
-        setLoading(false);
+        prodId = prodRes.product?.id || prodRes.id || barcode;
+      } catch (pErr: any) {
+        console.warn('Could not fetch product by barcode directly, using barcode as target:', pErr);
       }
-    };
 
+      // Fetch product analysis and alternatives in parallel with independent fault tolerance
+      const [analysisResult, recsResult] = await Promise.allSettled([
+        endpoints.getProductAnalysis(prodId),
+        endpoints.getAlternatives(prodId, 6),
+      ]);
+
+      if (analysisResult.status === 'fulfilled') {
+        setAnalysis(analysisResult.value);
+        setSelectedForCompare([analysisResult.value.product_id || prodId]);
+      } else {
+        const aErr: any = analysisResult.reason;
+        const msg = aErr?.response?.data?.detail || aErr?.message || 'Failed to analyze product.';
+        setError(msg);
+        setLoading(false);
+        return;
+      }
+
+      if (recsResult.status === 'fulfilled') {
+        setAlternatives(recsResult.value.recommendations || []);
+      } else {
+        const rErr: any = recsResult.reason;
+        console.warn('Recommendations query warning:', rErr);
+        // If analysis succeeded, don't crash the whole page; set alternatives to empty so the UI shows the clean empty state
+        setAlternatives([]);
+      }
+    } catch (err: any) {
+      console.error('AlternativesPage fetch error:', err);
+      const detailMsg =
+        err.response?.data?.detail ||
+        (err.code === 'ECONNABORTED'
+          ? 'The analysis server took too long to evaluate catalog candidates. Please try again.'
+          : 'Failed to load recommendations. Please verify the barcode.');
+      setError(detailMsg);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchData();
   }, [barcode]);
 
@@ -90,7 +119,7 @@ export const AlternativesPage: React.FC = () => {
         <ErrorState
           title="Could Not Load Alternatives"
           message={error || 'Product information unavailable.'}
-          onRetry={() => window.location.reload()}
+          onRetry={fetchData}
         />
       </div>
     );
